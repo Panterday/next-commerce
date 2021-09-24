@@ -5,17 +5,7 @@ import styles from './Navigation.module.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { ThemeProvider} from '@mui/material'
 import theme from '../utils/globalThemeMUI';
-
-import { createStyles, makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles(() =>
-  createStyles({
-    test: {
-      backgroundColor: 'red',
-      marginLeft: '10em'
-    },
-  }),
-);
+import useStyles from '../utils/styles';
 
 const Navigation = ()=>{
     const classes = useStyles(); 
