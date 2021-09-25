@@ -5,14 +5,14 @@ import styles from './Navigation.module.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { ThemeProvider} from '@mui/material'
 import theme from '../utils/globalThemeMUI';
-import useStyles from '../utils/styles';
+
 
 const Navigation = ()=>{
-    const classes = useStyles(); 
     return(
             <ThemeProvider theme={theme}>
                 <div className={styles.navBar}>
-                    <Typography variant="h5" sx={{marginLeft: '10vw', fontSize: {sm: '2em', xs: '3em'}}}>
+                    <Typography variant="h5" sx={{marginLeft: '5vw', 
+                        fontSize: {sm: '2em', xs: '1.3em'}}}>
                         MagicHouse<span style={{color: '#49bcbe'}}>Store</span>
                     </Typography>
                     <Toolbar sx={{display: 'flex'}}>
@@ -50,14 +50,16 @@ const Navigation = ()=>{
                                 <Typography sx={{fontWeight: 'bold'}}>Nosotros</Typography>
                             </Link>
                         </Box>
-                        <IconButton sx={{marginRight: '5em'}}>
+                        <IconButton sx={{marginRight: {xs: '0'}}}>
                             <Badge badgeContent={1} color='primary'>
-                                <ShoppingCartIcon sx={{fontSize: {sm: '1em', xs: '2em'}}}/>
+                                <ShoppingCartIcon sx={{fontSize: '1em'}}/>
                             </Badge>
+                        </IconButton>
+                        <IconButton sx={{display: {xs:'flex', sm: 'none'}}}>
+                            <MenuIcon />
                         </IconButton>
                     </Toolbar>
                 </div>
-                <Box className={classes.test}>TEST</Box>
             </ThemeProvider>
     )
 }
