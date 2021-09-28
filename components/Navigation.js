@@ -1,10 +1,12 @@
 import { IconButton, Box, Button,  AppBar, Toolbar, Typography, Search, SearchIconWrapper,
-    Container, Link, Badge} from '@mui/material';
+    Container, Badge, Link as MuiLink} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from './Navigation.module.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { ThemeProvider} from '@mui/material'
 import theme from '../utils/globalThemeMUI';
+
+import Link from 'next/link'
 
 
 const Navigation = ()=>{
@@ -17,37 +19,25 @@ const Navigation = ()=>{
                     </Typography>
                     <Toolbar sx={{display: 'flex'}}>
                         <Box sx={{display: 'flex', gap: '1.5vw', marginRight: '1em'}}>
-                            <Link
-                                component="button"
-                                variant="body2"
-                                underline="hover"
-                                sx={{color: 'black', "&:hover": {color: '#49bcbe'}, display: {sm: 'initial', xs : 'none'}}}
-                                >
-                                <Typography sx={{fontWeight: 'bold'}}>Inicio</Typography>
+                            <Link href="/" passHref>
+                                <MuiLink sx={{display: {xs: 'none', sm: 'flex'}}}>
+                                    Inicio
+                                </MuiLink>
                             </Link>
-                            <Link
-                                component="button"
-                                variant="body2"
-                                underline="hover"
-                                sx={{color: 'black', "&:hover": {color: '#49bcbe'}, display: {sm: 'initial', xs : 'none'}}}
-                                >
-                                <Typography sx={{fontWeight: 'bold'}}>Categorías</Typography>
+                            <Link href="/products" passHref>
+                                <MuiLink sx={{display: {xs: 'none', sm: 'flex'}}}>
+                                    Productos
+                                </MuiLink>
                             </Link>
-                            <Link
-                                component="button"
-                                variant="body2"
-                                underline="hover"
-                                sx={{color: 'black', "&:hover": {color: '#49bcbe'}, display: {sm: 'initial', xs : 'none'}}}
-                                >
-                                <Typography sx={{fontWeight: 'bold'}}>Productos</Typography>
+                            <Link href="/category" passHref>
+                                <MuiLink sx={{display: {xs: 'none', sm: 'flex'}}}>
+                                    Categorías
+                                </MuiLink>
                             </Link>
-                            <Link
-                                component="button"
-                                variant="body2"
-                                underline="hover"
-                                sx={{color: 'black', "&:hover": {color: '#49bcbe'}, display: {sm: 'initial', xs : 'none'}}}
-                                >
-                                <Typography sx={{fontWeight: 'bold'}}>Nosotros</Typography>
+                            <Link href="/aboutUs" passHref>
+                                <MuiLink sx={{display: {xs: 'none', sm: 'flex'}}}>
+                                    Nosotros
+                                </MuiLink>
                             </Link>
                         </Box>
                         <IconButton sx={{marginRight: {xs: '0'}}}>

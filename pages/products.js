@@ -1,10 +1,11 @@
+import HomeContent from "../components/HomeContent";
 import Navigation from "../components/Navigation";
 
 const products = ()=>{
     return(
         <div>
             <Navigation />
-            HOLA
+            <HomeContent />
         </div>
     )
 }

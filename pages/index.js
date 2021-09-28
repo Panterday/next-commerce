@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <HomeContent />
+      <h1>HOME</h1>
       {/* <main className={styles.main}>
         <Button variant="contained" color="secondary">Hello World</Button>;
         <Typography variant="h1">HELLO</Typography>
