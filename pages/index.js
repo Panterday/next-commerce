@@ -1,17 +1,26 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { IconButton, Box, Button,  AppBar, Toolbar, Typography, Search, SearchIconWrapper,
-Container, Link} from '@mui/material';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import {
+  IconButton,
+  Box,
+  Button,
+  AppBar,
+  Toolbar,
+  Typography,
+  Search,
+  SearchIconWrapper,
+  Container,
+  Link,
+} from "@mui/material";
 
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import { display } from '@mui/system';
-import Navigation from '../components/Navigation';
+import MenuIcon from "@mui/icons-material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
+import { display } from "@mui/system";
+import Navigation from "../components/Navigation";
 
-import HomeContent from '../components/HomeContent';
+import HomeContent from "../components/productContent/ProductContent";
 export default function Home() {
-
   return (
     <div className={styles.container}>
       <Head>
@@ -30,5 +39,5 @@ export default function Home() {
 
       </footer> */}
     </div>
-  )
+  );
 }

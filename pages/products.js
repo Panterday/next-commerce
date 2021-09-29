@@ -1,13 +1,13 @@
-import HomeContent from "../components/HomeContent";
 import Navigation from "../components/Navigation";
+import ProductContent from "../components/productContent/ProductContent";
 
-const products = ()=>{
-    return(
-        <div>
-            <Navigation />
-            <HomeContent />
-        </div>
-    )
-}
+const products = () => {
+  return (
+    <div>
+      <Navigation />
+      <ProductContent />
+    </div>
+  );
+};
 
-export default products; 
+export default products;

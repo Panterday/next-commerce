@@ -1,14 +1,16 @@
-.navBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6em;
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6em;
+  border-bottom: 1px solid #49bcbe;
+  margin-bottom: 2em;
 }
 
-.menu{
-    display: flex;
-    gap: 3em;
-    margin-right: 12em;
+.menu {
+  display: flex;
+  gap: 3em;
+  margin-right: 12em;
 }
 /* 
 @media (max-width: 500px){
