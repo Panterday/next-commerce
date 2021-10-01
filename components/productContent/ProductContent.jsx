@@ -1,10 +1,10 @@
 import { AppBar, Container, Grid, Toolbar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import MyCard from "../MyCard";
+import MyCard from "../myCard/MyCard";
 
 import data from "../../src/fakeDB";
 
-const HomeContent = () => {
+const ProductContent = () => {
   return (
     <Box display="flex" flexWrap="wrap">
       <Box
@@ -32,4 +32,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default ProductContent;

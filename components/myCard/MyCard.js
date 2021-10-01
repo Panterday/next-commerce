@@ -5,7 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import { CardActionArea, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { ThemeProvider } from "@mui/material";
-import theme from "../utils/globalThemeMUI";
+import theme from "../../utils/globalThemeMUI";
 
 export default function MyCard({ nombre, srcImg, precio }) {
   return (

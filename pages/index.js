@@ -17,9 +17,9 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { display } from "@mui/system";
-import Navigation from "../components/Navigation";
+import Navigation from "../components/navigation/Navigation";
+import HomeContent from "../components/homeContent/HomeContent";
 
-import HomeContent from "../components/productContent/ProductContent";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -29,7 +29,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-      <h1>HOME</h1>
+      <HomeContent />
       {/* <main className={styles.main}>
         <Button variant="contained" color="secondary">Hello World</Button>;
         <Typography variant="h1">HELLO</Typography>

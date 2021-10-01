@@ -12,9 +12,9 @@
   gap: 3em;
   margin-right: 12em;
 }
-/* 
-@media (max-width: 500px){
-    .navBar{
-        margin-top: 2em;
-    }
-} */
+
+@media (max-width: 600px) {
+  .navBar {
+    margin-bottom: 0em;
+  }
+}

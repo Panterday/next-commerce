@@ -15,7 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styles from "./Navigation.module.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ThemeProvider } from "@mui/material";
-import theme from "../utils/globalThemeMUI";
+import theme from "../../utils/globalThemeMUI";
 
 import Link from "next/link";
 
@@ -30,7 +30,7 @@ const Navigation = () => {
           MagicHouse<span style={{ color: "primary.main" }}>Store</span>
         </Typography>
         <Toolbar sx={{ display: "flex" }}>
-          <Box sx={{ display: "flex", gap: "1.5vw", marginRight: "1em" }}>
+          <Box sx={{ display: "flex", gap: "2vw", marginRight: "1em" }}>
             <Link href="/" passHref>
               <MuiLink sx={{ display: { xs: "none", sm: "flex" } }}>
                 Inicio
@@ -52,13 +52,17 @@ const Navigation = () => {
               </MuiLink>
             </Link>
           </Box>
-          <IconButton sx={{ marginRight: { xs: "0" } }}>
+          <IconButton sx={{ marginRight: { xs: "0", sm: "2em" } }}>
             <Badge badgeContent={1} color="primary">
               <ShoppingCartIcon sx={{ fontSize: "1em" }} />
             </Badge>
           </IconButton>
-          <IconButton sx={{ display: { xs: "flex", sm: "none" } }}>
-            <MenuIcon />
+          <IconButton
+            sx={{
+              display: { xs: "flex", sm: "none" },
+            }}
+          >
+            <MenuIcon fontSize="large" />
           </IconButton>
         </Toolbar>
       </div>

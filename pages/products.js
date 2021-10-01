@@ -1,4 +1,4 @@
-import Navigation from "../components/Navigation";
+import Navigation from "../components/navigation/Navigation";
 import ProductContent from "../components/productContent/ProductContent";
 
 const products = () => {
