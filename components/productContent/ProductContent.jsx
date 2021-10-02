@@ -6,7 +6,7 @@ import data from "../../src/fakeDB";
 
 const ProductContent = () => {
   return (
-    <Box display="flex" flexWrap="wrap">
+    <Box display="flex" flexWrap="wrap" mt="8em">
       <Box
         display="flex"
         flexWrap="wrap"

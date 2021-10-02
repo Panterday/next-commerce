@@ -4,7 +4,8 @@
   align-items: center;
   height: 6em;
   border-bottom: 1px solid #49bcbe;
-  margin-bottom: 2em;
+  position: fixed;
+  width: 100vw;
 }
 
 .menu {

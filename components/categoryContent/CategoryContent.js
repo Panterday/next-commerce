@@ -1,9 +1,12 @@
 import { Grid } from "@mui/material";
+import styles from "./CategoryContent.module.css";
+const CategoryContent = () => {
+  return (
+    <div>
+      <div className={styles.mainDiv}>TEST</div>
+      <h4>CAT</h4>
+    </div>
+  );
+};
 
-const CategoryContent = ()=>{
-    return(
-        <h1>CATEGORIES</h1>
-    )
-}
-
-export default CategoryContent; 
+export default CategoryContent;

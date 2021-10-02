@@ -22,50 +22,86 @@ import Link from "next/link";
 const Navigation = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className={styles.navBar}>
-        <Typography
-          variant="h5"
-          sx={{ marginLeft: "5vw", fontSize: { sm: "2em", xs: "1.7em" } }}
+      <AppBar
+        sx={{
+          backgroundColor: "white",
+          height: "6em",
+          justifyContent: "center",
+        }}
+      >
+        <Toolbar
+          sx={{
+            display: "flex",
+            flecDirection: "row",
+            justifyContent: "space-between",
+            padding: 0,
+          }}
         >
-          MagicHouse<span style={{ color: "primary.main" }}>Store</span>
-        </Typography>
-        <Toolbar sx={{ display: "flex" }}>
-          <Box sx={{ display: "flex", gap: "2vw", marginRight: "1em" }}>
-            <Link href="/" passHref>
-              <MuiLink sx={{ display: { xs: "none", sm: "flex" } }}>
-                Inicio
-              </MuiLink>
-            </Link>
-            <Link href="/products" passHref>
-              <MuiLink sx={{ display: { xs: "none", sm: "flex" } }}>
-                Productos
-              </MuiLink>
-            </Link>
-            <Link href="/category" passHref>
-              <MuiLink sx={{ display: { xs: "none", sm: "flex" } }}>
-                Categorías
-              </MuiLink>
-            </Link>
-            <Link href="/aboutUs" passHref>
-              <MuiLink sx={{ display: { xs: "none", sm: "flex" } }}>
-                Nosotros
-              </MuiLink>
-            </Link>
-          </Box>
-          <IconButton sx={{ marginRight: { xs: "0", sm: "2em" } }}>
-            <Badge badgeContent={1} color="primary">
-              <ShoppingCartIcon sx={{ fontSize: "1em" }} />
-            </Badge>
-          </IconButton>
-          <IconButton
+          <Typography
+            variant="h5"
             sx={{
-              display: { xs: "flex", sm: "none" },
+              marginLeft: "5vw",
+              fontSize: { sm: "2em", xs: "1.5em" },
             }}
           >
-            <MenuIcon fontSize="large" />
-          </IconButton>
+            MagicHouse<span style={{ color: "#49bcbe" }}>Store</span>
+          </Typography>
+          <Box sx={{ display: "flex" }}>
+            <Toolbar sx={{ display: "flex", gap: "2em" }}>
+              <Link href="/" passHref>
+                <MuiLink
+                  fontSize="1.1em"
+                  underline="hover"
+                  color="black"
+                  sx={{ display: { xs: "none", sm: "flex" } }}
+                >
+                  Inicio
+                </MuiLink>
+              </Link>
+              <Link href="/products" passHref>
+                <MuiLink
+                  fontSize="1.1em"
+                  underline="hover"
+                  color="black"
+                  sx={{ display: { xs: "none", sm: "flex" } }}
+                >
+                  Productos
+                </MuiLink>
+              </Link>
+              <Link href="/category" passHref>
+                <MuiLink
+                  fontSize="1.1em"
+                  underline="hover"
+                  color="black"
+                  sx={{ display: { xs: "none", sm: "flex" } }}
+                >
+                  Categorías
+                </MuiLink>
+              </Link>
+              <Link href="/aboutUs" passHref>
+                <MuiLink
+                  fontSize="1.1em"
+                  underline="hover"
+                  color="black"
+                  sx={{ display: { xs: "none", sm: "flex" } }}
+                >
+                  Nosotros
+                </MuiLink>
+              </Link>
+            </Toolbar>
+            <Toolbar>
+              <IconButton>
+                <Badge badgeContent={1} color="primary">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+              <IconButton sx={{ display: { sx: "flex", sm: "none" } }}>
+                <MenuIcon sx={{ fontSize: 35 }} />
+              </IconButton>
+            </Toolbar>
+          </Box>
         </Toolbar>
-      </div>
+      </AppBar>
     </ThemeProvider>
   );
 };
