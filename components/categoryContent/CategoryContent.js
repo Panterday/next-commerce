@@ -1,11 +1,12 @@
 import { Grid } from "@mui/material";
+import Layout from "../layout/layout";
+import Navigation from "../navigation/Navigation";
 import styles from "./CategoryContent.module.css";
 const CategoryContent = () => {
   return (
-    <div>
-      <div className={styles.mainDiv}>TEST</div>
-      <h4>CAT</h4>
-    </div>
+    <section style={{ marginTop: "6em" }}>
+      <h1>Categories here</h1>
+    </section>
   );
 };
 

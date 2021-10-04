@@ -1,9 +1,17 @@
-import { Grid, Box, Typography, Button, Toolbar } from "@mui/material";
+import {
+  Grid,
+  Box,
+  Typography,
+  Button,
+  Toolbar,
+  Link as MuiLink,
+} from "@mui/material";
 import Image from "next/image";
 import home from "../../public/static/images/mops.jpg";
 import styles from "./HomeContent.module.css";
 import { ThemeProvider } from "@mui/material";
 import theme from "../../utils/globalThemeMUI";
+import Link from "next/link";
 
 const HomeContent = () => {
   return (
@@ -19,7 +27,7 @@ const HomeContent = () => {
           alignItems="center"
         >
           <Box display="flex" flexDirection="column" alignItems="center">
-            <Typography color="secondary.main">
+            <Typography color="whitesmoke">
               Tienda en línea de productos por mayoreo.
             </Typography>
             <Typography
@@ -32,7 +40,7 @@ const HomeContent = () => {
             >
               Productos para el hogar por mayoreo al mejor precio.
             </Typography>
-            <Button
+            {/* <Button
               variant="contained"
               sx={{
                 color: "primary.main",
@@ -41,7 +49,23 @@ const HomeContent = () => {
               }}
             >
               Empieza a comprar
-            </Button>
+            </Button> */}
+            <Link href="/products" passHref>
+              <Button
+                variant="contained"
+                sx={{
+                  color: "whitesmoke",
+                  backgroundColor: "primary.dark",
+                  fontWeight: "bold",
+                  "&:hover": {
+                    backgroundColor: "secondary.main",
+                    color: "primary.dark",
+                  },
+                }}
+              >
+                Empieza a comprar
+              </Button>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} p={{ xs: 0, sm: 0 }}>

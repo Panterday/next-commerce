@@ -10,16 +10,26 @@ import {
   Container,
   Badge,
   Link as MuiLink,
+  Drawer,
+  List,
+  ListItem,
+  Divider,
+  ListItemText,
+  ListItemButton,
+  ListItemIcon,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
 import styles from "./Navigation.module.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ThemeProvider } from "@mui/material";
 import theme from "../../utils/globalThemeMUI";
 
 import Link from "next/link";
+import { useState } from "react";
 
 const Navigation = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <ThemeProvider theme={theme}>
       <AppBar
@@ -95,13 +105,55 @@ const Navigation = () => {
                   <ShoppingCartIcon />
                 </Badge>
               </IconButton>
-              <IconButton sx={{ display: { sx: "flex", sm: "none" } }}>
+              <IconButton
+                sx={{ display: { sx: "flex", sm: "none" } }}
+                onClick={() => setShowMenu(true)}
+              >
                 <MenuIcon sx={{ fontSize: 35 }} />
               </IconButton>
             </Toolbar>
           </Box>
         </Toolbar>
       </AppBar>
+      {/* SIDE MENU */}
+      <Drawer open={showMenu} onClose={() => setShowMenu(false)}>
+        <Box width="70vw">
+          <List>
+            <ListItem>
+              <Link href="/" passHref>
+                <ListItemButton>
+                  <ListItemIcon>
+                    <HomeIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Inicio" />
+                </ListItemButton>
+              </Link>
+            </ListItem>
+            <Divider />
+            <ListItem>
+              <Link href="/products" passHref>
+                <ListItemButton>
+                  <ListItemText primary="Productos" />
+                </ListItemButton>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="/category" passHref>
+                <ListItemButton>
+                  <ListItemText primary="Categorías" />
+                </ListItemButton>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="/aboutUs" passHref>
+                <ListItemButton>
+                  <ListItemText primary="Nosotros" />
+                </ListItemButton>
+              </Link>
+            </ListItem>
+          </List>
+        </Box>
+      </Drawer>
     </ThemeProvider>
   );
 };

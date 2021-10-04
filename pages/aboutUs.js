@@ -1,11 +1,11 @@
+import Layout from "../components/layout/layout";
 import Navigation from "../components/navigation/Navigation";
 
 const aboutUs = () => {
   return (
-    <div>
-      <Navigation />
-      <h1>NOSOTROS</h1>
-    </div>
+    <Layout>
+      <h1>ABOUT US PAGE</h1>
+    </Layout>
   );
 };
 

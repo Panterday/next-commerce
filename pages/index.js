@@ -19,25 +19,30 @@ import SearchIcon from "@mui/icons-material/Search";
 import { display } from "@mui/system";
 import Navigation from "../components/navigation/Navigation";
 import HomeContent from "../components/homeContent/HomeContent";
+import Layout from "../components/layout/layout";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navigation />
-      <HomeContent />
-      {/* <main className={styles.main}>
-        <Button variant="contained" color="secondary">Hello World</Button>;
-        <Typography variant="h1">HELLO</Typography>
-      </main>
-
-      <footer className={styles.footer}>
-
-      </footer> */}
-    </div>
+    <Layout>
+      <div className={styles.container}>
+        <Head>
+          <title>MagicHouseStore</title>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <HomeContent />
+        {/* <main className={styles.main}>
+          <Button variant="contained" color="secondary">Hello World</Button>;
+          <Typography variant="h1">HELLO</Typography>
+        </main>
+      
+        <footer className={styles.footer}>
+      
+        </footer> */}
+      </div>
+    </Layout>
   );
 }
