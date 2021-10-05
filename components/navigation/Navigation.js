@@ -78,7 +78,7 @@ const Navigation = () => {
                   Productos
                 </MuiLink>
               </Link>
-              <Link href="/category" passHref>
+              <Link href="/categories" passHref>
                 <MuiLink
                   fontSize="1.1em"
                   underline="hover"
@@ -88,7 +88,7 @@ const Navigation = () => {
                   Categorías
                 </MuiLink>
               </Link>
-              <Link href="/aboutUs" passHref>
+              <Link href="/about-us" passHref>
                 <MuiLink
                   fontSize="1.1em"
                   underline="hover"

@@ -17,13 +17,16 @@ const ProductContent = () => {
           marginRight: { xs: "0", sm: "5em" },
         }}
       >
-        {data.map((articulo) => {
+        {data.map((item) => {
           return (
             <MyCard
-              nombre={articulo.articulo}
-              srcImg={articulo.imagen}
-              precio={articulo.precio}
-              key={articulo.id}
+              key={item.id}
+              nombre={item.itemName}
+              srcImg={item.image}
+              precio={item.price}
+              category={item.slugCategory}
+              slug={item.slug}
+              itemId={item.id}
             />
           );
         })}
