@@ -17,7 +17,13 @@ const Product = () => {
   } else {
     return (
       <Layout>
-        <ProductDetails id={id} itemName={item.itemName} image={item.image} />
+        <ProductDetails
+          id={id}
+          itemName={item.itemName}
+          image={item.image}
+          description={item.description}
+          price={item.price}
+        />
       </Layout>
     );
   }

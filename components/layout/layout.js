@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     <div>
       <Navigation />
       <main>{children}</main>
-      <footer>This is my footer from a layout</footer>
+      <footer style={{ height: "2vh" }}>This is my footer from a layout</footer>
     </div>
   );
 };

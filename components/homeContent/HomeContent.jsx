@@ -12,6 +12,7 @@ import styles from "./HomeContent.module.css";
 import { ThemeProvider } from "@mui/material";
 import theme from "../../utils/globalThemeMUI";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const HomeContent = () => {
   return (
@@ -27,9 +28,18 @@ const HomeContent = () => {
           alignItems="center"
         >
           <Box display="flex" flexDirection="column" alignItems="center">
-            <Typography color="whitesmoke">
-              Tienda en línea de productos por mayoreo.
-            </Typography>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { delay: 0.2 } },
+              }}
+            >
+              <Typography color="whitesmoke">
+                Tienda en línea de productos por mayoreo.
+              </Typography>
+            </motion.div>
             <Typography
               variant="h2"
               color="whitesmoke"

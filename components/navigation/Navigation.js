@@ -24,6 +24,7 @@ import styles from "./Navigation.module.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { ThemeProvider } from "@mui/material";
 import theme from "../../utils/globalThemeMUI";
+import { motion } from "framer-motion";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -47,15 +48,24 @@ const Navigation = () => {
             padding: 0,
           }}
         >
-          <Typography
-            variant="h5"
-            sx={{
-              marginLeft: "5vw",
-              fontSize: { sm: "2em", xs: "1.5em" },
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { delay: 0.1 } },
             }}
           >
-            MagicHouse<span style={{ color: "#49bcbe" }}>Store</span>
-          </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                marginLeft: "5vw",
+                fontSize: { sm: "2em", xs: "1.5em" },
+              }}
+            >
+              MagicHouse<span style={{ color: "#49bcbe" }}>Store</span>
+            </Typography>
+          </motion.div>
           <Box sx={{ display: "flex" }}>
             <Toolbar sx={{ display: "flex", gap: "2em" }}>
               <Link href="/" passHref>
@@ -138,14 +148,14 @@ const Navigation = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="/category" passHref>
+              <Link href="/categories" passHref>
                 <ListItemButton>
                   <ListItemText primary="Categorías" />
                 </ListItemButton>
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="/aboutUs" passHref>
+              <Link href="/about-us" passHref>
                 <ListItemButton>
                   <ListItemText primary="Nosotros" />
                 </ListItemButton>
