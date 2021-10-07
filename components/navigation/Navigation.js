@@ -110,11 +110,13 @@ const Navigation = () => {
               </Link>
             </Toolbar>
             <Toolbar>
-              <IconButton>
-                <Badge badgeContent={1} color="primary">
-                  <ShoppingCartIcon />
-                </Badge>
-              </IconButton>
+              <Link href="/car" passHref>
+                <IconButton>
+                  <Badge badgeContent={1} color="primary">
+                    <ShoppingCartIcon />
+                  </Badge>
+                </IconButton>
+              </Link>
               <IconButton
                 sx={{ display: { sx: "flex", sm: "none" } }}
                 onClick={() => setShowMenu(true)}
