@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import theme from "../../utils/globalThemeMUI";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ProductDetails = ({ id, itemName, image, description, price }) => {
   const [quantity, setQuantity] = useState(0);
@@ -19,41 +19,43 @@ const ProductDetails = ({ id, itemName, image, description, price }) => {
   const handleChange = (event) => {
     const value = Number(event.target.value);
     setQuantity(value);
-    setSubTotal(price);
-    setTotal(value * price);
-  };
-  const handleQuantityDown = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-      setTotal((quantity - 1) * subTotal);
-    } else {
+    if (value === 0) {
+      setTotal(0);
       setSubTotal(0);
     }
   };
-
+  const handleQuantityDown = () => {
+    if (quantity >= 0) {
+      setQuantity(quantity - 1);
+    }
+  };
   const handleQuantityUp = () => {
     setQuantity(quantity + 1);
-    if (quantity >= 0 && quantity < 10) {
+  };
+
+  useEffect(() => {
+    if (quantity > 0 && quantity < 10) {
       setSubTotal(price);
+      setTotal(quantity * subTotal);
     }
     if (quantity >= 10 && quantity < 50) {
       setSubTotal(price - price * 0.1);
+      setTotal(quantity * subTotal);
     }
     if (quantity >= 50 && quantity < 100) {
       setSubTotal(price - price * 0.2);
+      setTotal(quantity * subTotal);
     }
     if (quantity >= 100 && quantity < 300) {
       setSubTotal(price - price * 0.3);
+      setTotal(quantity * subTotal);
     }
     if (quantity >= 300) {
       setSubTotal(price - price * 0.5);
+      setTotal(quantity * subTotal);
     }
-    if (subTotal === 0) {
-      setTotal((quantity + 1) * subTotal + price);
-    } else {
-      setTotal((quantity + 1) * subTotal);
-    }
-  };
+  }, [quantity, subTotal]);
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container mt="8em">
