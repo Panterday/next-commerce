@@ -1,3 +1,4 @@
+import Footer from "../footer/Footer";
 import Navigation from "../navigation/Navigation";
 
 const Layout = ({ children }) => {
@@ -5,7 +6,7 @@ const Layout = ({ children }) => {
     <div>
       <Navigation />
       <main>{children}</main>
-      <footer style={{ height: "2vh" }}>This is my footer from a layout</footer>
+      <Footer />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { AppBar, Container, Grid, Toolbar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import MyCard from "../myCard/MyCard";
 import data from "../../src/fakeDB";
+import { useEffect } from "react";
 
 const ProductContent = () => {
   return (
