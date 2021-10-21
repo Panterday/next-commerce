@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import FeedBack from "../../components/feedBacks/FeedBack";
+import FeedBackContent from "../../components/feedBacks/FeedBackContent";
 import Layout from "../../components/layout/layout";
 import ProductDetails from "../../components/productDetails/ProductDetails";
 import data from "../../src/fakeDB";
@@ -25,7 +25,7 @@ const Product = () => {
           description={item.description}
           price={item.price}
         />
-        <FeedBack />
+        <FeedBackContent />
       </Layout>
     );
   }
