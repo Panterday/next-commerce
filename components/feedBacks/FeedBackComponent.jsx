@@ -25,7 +25,7 @@ const FeedBackComponent = ({ name }) => {
       <Box display="flex" mt="2em">
         <Box sx={{ border: "1px solid", borderRadius: "8px", padding: "1em" }}>
           <Typography>
-            Es un producto chido chido bueno de la mejor calidad.
+            Es un producto chido chido bueno de la mejor calidad test test.
           </Typography>
         </Box>
       </Box>
