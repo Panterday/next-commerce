@@ -9,7 +9,12 @@ import {
 } from "@mui/material";
 const FeedBackComponent = ({ name }) => {
   return (
-    <Box display="flex" justifyContent="space-evenly">
+    <Box
+      display="flex"
+      alignItems="center"
+      sx={{ flexDirection: { xs: "column", sm: "row" } }}
+      gap="1em"
+    >
       <Box display="flex" gap="1em" alignItems="center">
         <Avatar>DC</Avatar>
         <Rating value={5} readOnly />
@@ -22,7 +27,7 @@ const FeedBackComponent = ({ name }) => {
       >
         <Typography>{name}</Typography>
       </Box>
-      <Box display="flex" mt="2em">
+      <Box display="flex" padding="1em">
         <Box sx={{ border: "1px solid", borderRadius: "8px", padding: "1em" }}>
           <Typography>
             Es un producto chido chido bueno de la mejor calidad test test.

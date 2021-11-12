@@ -18,6 +18,7 @@ const CategoryContent = () => {
   return (
     <Box
       mt="8em"
+      mx="5em"
       display="flex"
       flexWrap="wrap"
       justifyContent="center"

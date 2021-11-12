@@ -56,15 +56,19 @@ const Navigation = () => {
               visible: { opacity: 1, transition: { delay: 0.1 } },
             }}
           >
-            <Typography
-              variant="h5"
-              sx={{
-                marginLeft: "5vw",
-                fontSize: { sm: "2em", xs: "1.5em" },
-              }}
-            >
-              MagicHouse<span style={{ color: "#49bcbe" }}>Store</span>
-            </Typography>
+            <Link href="/" passHref>
+              <MuiLink underline="none">
+                <Typography
+                  variant="h5"
+                  sx={{
+                    marginLeft: "5vw",
+                    fontSize: { sm: "2em", xs: "1.5em" },
+                  }}
+                >
+                  MagicHouse<span style={{ color: "#49bcbe" }}>Store</span>
+                </Typography>
+              </MuiLink>
+            </Link>
           </motion.div>
           <Box sx={{ display: "flex" }}>
             <Toolbar sx={{ display: "flex", gap: "2em" }}>

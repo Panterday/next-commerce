@@ -17,7 +17,13 @@ const FeedBackContent = () => {
         </Typography>
       </Box>
       <Divider />
-      <Box mx="13em" display="flex" flexDirection="column" gap="1em" mt="2em">
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        gap="1em"
+        mt="2em"
+      >
         <FeedBackComponent name="David Chávez Núñez" />
         <Divider />
         <FeedBackComponent name="Volobin Volovan" />

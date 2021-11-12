@@ -50,16 +50,6 @@ const HomeContent = () => {
             >
               Productos para el hogar por mayoreo al mejor precio.
             </Typography>
-            {/* <Button
-              variant="contained"
-              sx={{
-                color: "primary.main",
-                backgroundColor: "secondary.main",
-                fontWeight: "bold",
-              }}
-            >
-              Empieza a comprar
-            </Button> */}
             <Link href="/products" passHref>
               <Button
                 variant="contained"
@@ -79,7 +69,7 @@ const HomeContent = () => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} p={{ xs: 0, sm: 0 }}>
-          <Toolbar>
+          <Toolbar sx={{ display: "flex", justifyContent: "center" }}>
             <Image src={home} />
           </Toolbar>
         </Grid>
