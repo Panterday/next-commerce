@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
-import { CardActionArea, Typography } from "@mui/material";
+import { CardActionArea, Typography, Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import { ThemeProvider } from "@mui/material";
 import theme from "../../utils/globalThemeMUI";
@@ -33,16 +33,15 @@ export default function MyCard({
         <CardActions sx={{ justifyContent: "center" }}>
           <Typography>${precio} x 1 pieza</Typography>
         </CardActions>
-        <CardActions
-          sx={{ backgroundColor: "secondary.main", justifyContent: "center" }}
+        <Box
+          sx={{ backgroundColor: "primary.main" }}
+          display="flex"
+          justifyContent="center"
         >
-          <Button size="small" variant="contained">
-            <Typography fontSize="1em">Comprar</Typography>
-          </Button>
-          <Button size="small" variant="contained">
-            <Typography fontSize="1em">Agregar al carrito</Typography>
-          </Button>
-        </CardActions>
+          <Typography fontSize="1em">
+            Click en la imagen para ver detalles
+          </Typography>
+        </Box>
       </Card>
     </ThemeProvider>
   );

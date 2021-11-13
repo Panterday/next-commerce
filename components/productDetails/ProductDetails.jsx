@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import theme from "../../utils/globalThemeMUI";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const ProductDetails = ({ id, itemName, image, description, price }) => {
@@ -138,7 +139,9 @@ const ProductDetails = ({ id, itemName, image, description, price }) => {
               >
                 <Box display="flex" gap="1em">
                   <Button variant="contained">Agregar al carrito</Button>
-                  <Button variant="contained">Proceder al pago</Button>
+                  <Link href="/payment" passHref>
+                    <Button variant="contained">Proceder al pago</Button>
+                  </Link>
                 </Box>
                 <Box
                   display="flex"

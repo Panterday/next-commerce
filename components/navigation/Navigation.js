@@ -57,7 +57,7 @@ const Navigation = () => {
             }}
           >
             <Link href="/" passHref>
-              <MuiLink underline="none">
+              <MuiLink underline="none" color="inherit">
                 <Typography
                   variant="h5"
                   sx={{
@@ -116,7 +116,7 @@ const Navigation = () => {
             <Toolbar>
               <Link href="/car" passHref>
                 <IconButton>
-                  <Badge badgeContent={1} color="primary">
+                  <Badge badgeContent={0} color="primary">
                     <ShoppingCartIcon />
                   </Badge>
                 </IconButton>
